@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# if parameter is not passed , show error
+if [ -z $1 ]; then
+   echo "Error: please enter a valid parameter"
+   exit 1 # status code for error message.
+fi
+
+# $1 stores the first argument.
+for (( i = 1 ; i <= $1 ; i++ )); do
+        for (( j = 1 ; j <= $i ; j++ )); do
+                echo -n "*" #-n to avoid printing new line chars
+        done
+        echo "" # priting newline by empty echo
+done
