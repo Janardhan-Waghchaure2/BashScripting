@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Script to read from a text file and extract all the URLs from it
+echo "Enter a text file:"
+read file
+
+# Extract URLs from the file
+grep -Eo "https?://[a-zA-Z0-9./?=_-]*" "$file"
